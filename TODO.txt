@@ -1,0 +1,9 @@
+Minor to-fixes:
+- cut out buttons textures with circle selection to be consistent
+- for some reason animations are slowed down the more to right a tile is
+
+Known bugs:
+- currently killing all animations on resize, so non-moving events can get stuck in a non-finished state
+    (probably should have a list of killable moving animations)
+
+Possible bugs:

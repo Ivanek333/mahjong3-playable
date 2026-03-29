@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* prevent scroll bars from the canvas */
+  background: #1a1a2e; /* match app backgroundColor so no flash on load */
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+#app canvas {
+  display: block; /* kills the 4px inline gap below the canvas */
+  width: 100% !important;
+  height: 100% !important;
+}

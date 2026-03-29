@@ -1,0 +1,184 @@
+{
+  "board": {
+    "cols": 7,
+    "rows": 7,
+    "paddingUnits": 0.5,
+    "layerXOffsetUnits": -0.1,
+    "layerYOffsetUnits": 0.1,
+    "tileAppearDelay": 0.015,
+    "tileFlipDelay": 0.05
+  },
+  "tile": {
+    "widthUnits": 1.0,
+    "heightUnits": 1.4,
+    "overlapXUnits": 0.09,
+    "overlapYUnits": 0.11
+  },
+  "hand": {
+    "slots": 7,
+    "tileSpacingUnits": 0.1,
+    "marginUnits": 0.25
+  },
+  "buttons": {
+    "count": 3,
+    "sizeUnits": 1.0,
+    "spacingUnits": 0.25,
+    "marginUnits": 0.25
+  },
+  "tutorial": {
+    "focusGridX":          3,
+    "focusGridY":          3,
+    "focusLayer":          3,
+    "focusRadiusUnits":    1,
+    "gradientFeatherUnits": 0.3,
+    "tintColor":           "#000000",
+    "tintAlpha":           0.78
+  },
+  "endPanel": {
+    "titleFontSizeUnits": 0.5,
+    "titleOffsetYUnits":  -1.2,
+    "buttonFontSizeUnits": 0.5,
+    "buttonWidthUnits":    3.5,
+    "buttonHeightUnits":   1.1,
+    "buttonOffsetYUnits":  0.6
+  },
+  "volume": {
+    "bgm":      0.07,
+    "sfxPick":  0.7,
+    "sfxMatch": 0.7,
+    "sfxWin":   0.7,
+    "sfxLose":  0.7
+  },
+  "assets": {
+    "backgrounds": {
+      "background1": "background1.jpg",
+      "background2": "background2.jpg",
+      "background3": "background3.jpg",
+      "background4": "background4.jpg",
+      "background5": "background5.jpg",
+      "background6": "background6.jpg",
+      "background7": "background7.jpg",
+      "background8": "background8.jpg"
+    },
+    "tiles": {
+      "tileBamboo1": "bamboo1.png",
+      "tileBamboo2": "bamboo2.png",
+      "tileBamboo3": "bamboo3.png",
+      "tileCircle1": "circle1.png",
+      "tileCircle2": "circle2.png",
+      "tileCircle3": "circle3.png",
+      "tilePinyin1": "pinyin1.png",
+      "tilePinyin2": "pinyin2.png",
+      "tilePinyin3": "pinyin3.png",
+      "tileFlower":  "chrysanthemum.png"
+    },
+    "textures": {
+      "tileBack":    "winter.png",
+      "btnUndo":     "back.png",
+      "btnShuffle":  "restart.png",
+      "btnSoundOn":  "sound_on.png",     
+      "btnSoundOff": "sound_off.png",
+      "slotBg":      "slot.png"
+    },
+    "audio": {
+      "bgm":      "a whole world on paper.mp3",
+      "sfxPick":  "click1.mp3",
+      "sfxMatch": "click4.mp3",
+      "sfxWin":   "win.mp3",
+      "sfxLose":  "lose.mp3"
+    }
+  },
+  "animations": {
+    "tile_appear": {
+      "duration": 0.3
+    },
+    "tile_pick": {
+      "riseY":        8,
+      "durationUp":   0.05,
+      "durationDown": 0.05
+    },
+    "tile_move_to_hand": {
+      "duration": 0.28
+    },
+    "tile_return_to_board": {
+      "duration": 0.25
+    },
+    "tile_match_remove": {
+      "flashDuration":  0.08,
+      "shrinkDuration": 0.22
+    },
+    "tile_hand_shift": {
+      "duration": 0.18
+    },
+    "flip_in": {
+      "duration": 0.4
+    },
+    "flip_out": {
+      "duration": 0.4,
+      "delay_before_flip_in": 0
+    },
+    "button_press": {
+      "scaleDown":    0.88,
+      "durationDown": 0.07,
+      "durationUp":   0.12
+    },
+    "hand_full_shake": {
+      "duration": 0.5,
+      "distance": 10
+    }
+  },
+  "particles": {
+    "colors": {
+      "background1": ["#ced5b9", "#88beab", "#35665e"],
+      "background2": ["#d5a19e", "#d2c9b8", "#d99191"],
+      "background3": ["#c97355", "#deb17d", "#cfd2c5"],
+      "background4": ["#e5d2cf", "#e5aa9a", "#bad6e5"],
+      "background5": ["#f0b688", "#cc755a", "#7f4842"],
+      "background6": ["#e6eB89", "#c8ccaf", "#7a72c2"],
+      "background7": ["#caecf3", "#438ed6", "#163f76"],
+      "background8": ["#dba8c2", "#d0415f", "#9e6579"]
+    },
+    "ambient": {
+      "maxCount": 50,
+      "speed": 150,
+      "speedVariance": 50,
+      "lifetime": 9.5,
+      "lifetimeVariance": 3,
+      "direction": 90,
+      "directionVariance": 18,
+      "spawnRate": 3
+    }
+  },
+  "level": {
+    "tileTypes": 10,
+    "layers": [
+      [
+                      [2,0], [3,0], [4,0],
+                      [2,1], [3,1], [4,1],
+        [0,2], [1,2], [2,2], [3,2], [4,2], [5,2], [6,2],
+        [0,3], [1,3], [2,3], [3,3], [4,3], [5,3], [6,3],
+        [0,4], [1,4], [2,4], [3,4], [4,4], [5,4], [6,4],
+                      [2,5], [3,5], [4,5],
+                      [2,6], [3,6], [4,6]
+      ],
+      [
+                              [2.5, 0], [3.5, 0],
+                              [2.5, 1.5], [3.5, 1.5],
+        [0, 2.5], [1.5, 2.5], [2.5, 2.5], [3.5, 2.5], [4.5, 2.5], [6, 2.5],
+        [0, 3.5], [1.5, 3.5], [2.5, 3.5], [3.5, 3.5], [4.5, 3.5], [6, 3.5],
+                              [2.5, 4.5], [3.5, 4.5],
+                              [2.5, 6], [3.5, 6]
+      ],
+      [
+                      [3,0],
+                      [3,2],
+        [0,3], [2,3], [3,3], [4,3], [6,3],
+                      [3,4],
+                      [3,6]
+      ],
+      [
+        [3,3]
+      ]
+    ]
+  }
+}
