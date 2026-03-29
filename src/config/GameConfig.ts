@@ -58,6 +58,8 @@ export interface GameConfig {
     gradientFeatherUnits: number;
     tintColor:            string;
     tintAlpha:            number;
+    hintText:             string,
+    hintOffsetYUnits:     number;
   };
   endPanel: {
     titleFontSizeUnits:  number;

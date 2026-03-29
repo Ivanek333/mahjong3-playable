@@ -1,4 +1,4 @@
-import { Container, Sprite, Texture } from 'pixi.js';
+import { Container, Sprite, Text, Texture } from 'pixi.js';
 import type { Application } from 'pixi.js';
 import { gsap } from 'gsap';
 import { bus } from '../core/EventBus';
@@ -15,6 +15,7 @@ function hexToRgb(hex: string): [number, number, number] {
 export class TutorialOverlay implements IManager {
   private readonly container: Container;
   private sprite: Sprite | null = null;
+  private hintText: Text | null = null;
   private dismissed = false;
 
   private dismissHandler: (() => void) | null = null;
@@ -82,6 +83,27 @@ export class TutorialOverlay implements IManager {
       this.sprite.destroy();
       this.sprite = null;
     }
+    
+    if (this.hintText) {
+        this.container.removeChild(this.hintText);
+        this.hintText.destroy();
+    }
+
+    this.hintText = new Text({
+    text:  cfg.tutorial.hintText,
+    style: {
+        fill:       '#ffffff',
+        fontWeight: 'bold',
+        fontSize:   unitSize * 0.38,
+        align:      'center',
+        dropShadow: { color: '#000000', blur: 4, distance: 3, alpha: 0.8, angle: Math.PI * 0.6 },
+    },
+    });
+    this.hintText.anchor.set(0.5);
+    this.hintText.zIndex = 101;
+    this.hintText.x = cx;
+    this.hintText.y = cy + (innerR + cfg.tutorial.hintOffsetYUnits * unitSize);
+    this.container.addChild(this.hintText);
 
     const texture = Texture.from(canvas);
     this.sprite = new Sprite(texture);
@@ -118,6 +140,9 @@ export class TutorialOverlay implements IManager {
     }
     if (this.sprite) {
       this.sprite.texture.destroy(true);
+    }
+    if (this.hintText) {
+        this.hintText.destroy();
     }
     this.container.destroy({ children: true });
   }

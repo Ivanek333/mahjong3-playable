@@ -32,7 +32,9 @@
     "focusRadiusUnits":    1,
     "gradientFeatherUnits": 0.3,
     "tintColor":           "#000000",
-    "tintAlpha":           0.78
+    "tintAlpha":           0.78,
+    "hintText":           "Collect 3 matching tiles",
+    "hintOffsetYUnits":   2.2
   },
   "endPanel": {
     "titleFontSizeUnits": 0.5,
