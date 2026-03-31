@@ -21,7 +21,7 @@
   },
   "buttons": {
     "count": 3,
-    "sizeUnits": 1.0,
+    "sizeUnits": 1.5,
     "spacingUnits": 0.25,
     "marginUnits": 0.25
   },
@@ -126,7 +126,7 @@
     },
     "hand_full_shake": {
       "duration": 0.5,
-      "distance": 10
+      "distance": 0.1
     }
   },
   "particles": {

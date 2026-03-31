@@ -108,13 +108,16 @@ export class Tile extends Container {
   }
 
   private _setInteractable(value: boolean): void {
-    this.eventMode = value ? 'static' : 'none';
+    this.eventMode = 'static';
     this.cursor    = value ? 'pointer' : 'default';
   }
 
   private _bindPointer(): void {
     this.on('pointerdown', () => {
-      if (!this._available) return;
+      if (!this._available) {
+        AnimationManager.play('hand_full_shake', this, {});
+        return;
+      }
 
       this.isCleared  = true;
       this._available = false;

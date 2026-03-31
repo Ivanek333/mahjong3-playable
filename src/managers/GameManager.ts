@@ -57,9 +57,11 @@ export class GameManager implements IManager {
     await LoadPixiAssets();
     //await LoadPixiAssets((progress: number) => { console.log(`${performance.now()} > Loading assets: ${Math.round(progress * 1000)/10}%`) });
 
-    this.animationManager = this.addManager(AnimationManager);
     this.soundManager = this.addManager(new SoundManager());
+    await this.soundManager.loadAll();
     this.soundManager.startBgm();
+    
+    this.animationManager = this.addManager(AnimationManager);
     this.boardManager = this.addManager(new BoardManager(this.app));
     this.handManager = this.addManager(new HandManager(this.app));
     this.background = this.addManager(new Background(this.app));
